@@ -49,12 +49,12 @@ button {
 </html>
 
 <script>
-   let api_key ="AIzaSyC7-JCvIFd6eTqQLRlhY86YLwmlP33bgoM"
+   let api_key ="AIzaSyCXMhU4JkfTK-8mFY8cbEvuQsd2Byl2-nA"
   //https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=thor&key=[YOUR_API_KEY]
  
   let search = async (q) =>{  
       let query = document.getElementById("query").value;
-      let url =`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${api_key}`
+     let url =`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${query}&regionCode=in&key=${api_key}`
       let res = await fetch(url);
 //    console.log(res)
  let data = await res.json()
